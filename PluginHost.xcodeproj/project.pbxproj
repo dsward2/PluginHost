@@ -14,7 +14,6 @@
 		0E6E61151E7914F200C4936B /* Plugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E6E61101E7914A400C4936B /* Plugin.framework */; };
 		0E6E61181E79178000C4936B /* PluginHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6E61171E79178000C4936B /* PluginHost.swift */; };
 		0E6E613A1E7951BE00C4936B /* PluginTestA.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0E6E61381E79518900C4936B /* PluginTestA.plugin */; };
-		0E6E616B1E7968CF00C4936B /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 0E6E616A1E7968CF00C4936B /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -264,7 +263,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E6E616B1E7968CF00C4936B /* README.md in Sources */,
 				0E6E61181E79178000C4936B /* PluginHost.swift in Sources */,
 				0E6E60E41E7911CF00C4936B /* AppDelegate.swift in Sources */,
 			);

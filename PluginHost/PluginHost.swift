@@ -42,16 +42,18 @@ import Plugin
                     let isDirectory = isDirectory as? NSNumber, isDirectory.boolValue,
                     let bundle = Bundle(url: item), bundle.load() {
                     
-                        if let cls = bundle.principalClass as? Plugin.Type,
-                            let plugin: Plugin? = cls.init(pluginHost:self) {
+                        if let principalClass = bundle.principalClass as? Plugin.Type,
+                            let plugin: Plugin? = principalClass.init(pluginHost:self) {
                         
                             plugins.append(plugin!)
                         
                             print("PluginHost - Loaded plugin named \(plugin!.name)")
                         }
                     }
+                else { print("PluginHost - loadPluginsFromPath bundle load error") }
                 
-            } catch _ { }
+                
+            } catch _ { print("PluginHost - loadPluginsFromPath failed") }
         }
     }
     
