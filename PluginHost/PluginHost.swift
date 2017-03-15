@@ -42,9 +42,11 @@ import Plugin
                     let isDirectory = isDirectory as? NSNumber, isDirectory.boolValue,
                     let bundle = Bundle(url: item), bundle.load() {
                     
-                        //if let pluginMetatype = bundle.principalClass as? Plugin.Type,
-                        if let pluginMetatype: Plugin.Type? = Plugin.self,
-                            let plugin: Plugin? = pluginMetatype?.init(pluginHost:self) {
+                        // TODO: warning below, see https://forums.developer.apple.com/thread/43873
+                        //if let pluginMetatype: Plugin.Type? = Plugin.self,
+                        //  let plugin: Plugin? = pluginMetatype?.init(pluginHost:self) {
+                        if let pluginMetatype = bundle.principalClass as? Plugin.Type,
+                            let plugin: Plugin? = pluginMetatype.init(pluginHost:self) {
                             
                             plugins.append(plugin!)
                             
