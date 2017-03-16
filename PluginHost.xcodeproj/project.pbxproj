@@ -68,6 +68,7 @@
 		0E6E612F1E794D4E00C4936B /* PluginTestA.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PluginTestA.xcodeproj; path = PluginTestA/PluginTestA.xcodeproj; sourceTree = "<group>"; };
 		0E6E61381E79518900C4936B /* PluginTestA.plugin */ = {isa = PBXFileReference; lastKnownFileType = file; path = PluginTestA.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E6E616A1E7968CF00C4936B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0E7D39BD1E7B08BA0094DB54 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +86,7 @@
 		0E6E60D71E7911CF00C4936B = {
 			isa = PBXGroup;
 			children = (
+				0E7D39BD1E7B08BA0094DB54 /* LICENSE */,
 				0E6E616A1E7968CF00C4936B /* README.md */,
 				0E6E60E21E7911CF00C4936B /* PluginHost */,
 				0E6E60E11E7911CF00C4936B /* Products */,
