@@ -10,6 +10,7 @@ import Cocoa
 import Plugin
 
 
+/// The PluginHost object loads plugin bundles and stores plugin objects in the plugins[] array
 @objc open class PluginHost: NSObject, PluginHostDelegate {
 
     /// aPluginHostProperty is a string property in PluginHost to test callbacks from a Plugin object
@@ -33,6 +34,7 @@ import Plugin
             return
         }
         
+        /// load and initialize the plugin bundles
         while let item = enumerator.nextObject() as? URL {
             do {
                 var isDirectory: AnyObject?
