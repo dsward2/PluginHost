@@ -41,22 +41,18 @@ import Plugin
                 if let urlPath = (item as NSURL).path, urlPath.hasSuffix("plugin"),
                     let isDirectory = isDirectory as? NSNumber, isDirectory.boolValue,
                     let bundle = Bundle(url: item), bundle.load() {
-                    
-                        // TODO: warning below, see https://forums.developer.apple.com/thread/43873
-                        //if let pluginMetatype: Plugin.Type? = Plugin.self,
-                        //  let plugin: Plugin? = pluginMetatype?.init(pluginHost:self) {
-                        if let pluginMetatype = bundle.principalClass as? Plugin.Type,
-                            let plugin: Plugin? = pluginMetatype.init(pluginHost:self) {
-                            
-                            plugins.append(plugin!)
-                            
-                            print("PluginHost - Loaded plugin named \(plugin!.name)")
+                        let pluginMetatype = bundle.principalClass as? Plugin.Type
+                        if (pluginMetatype != nil) {
+                            let plugin = pluginMetatype?.init(pluginHost:self)
+                            if (plugin != nil) {
+                                plugins.append(plugin!)
+                                print("PluginHost - Loaded plugin named \(plugin!.name)")
+                            }
                         }
-                    }
-                else { print("PluginHost - loadPluginsFromPath bundle load error") }
+                }
+                else { print("PluginHost - loadPluginsFromPath .plugin bundle file name extension error") }
                 
             } catch _ { print("PluginHost - loadPluginsFromPath failed") }
         }
     }
-    
 }
