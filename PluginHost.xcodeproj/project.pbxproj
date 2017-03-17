@@ -10,10 +10,10 @@
 		0E6E60E41E7911CF00C4936B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6E60E31E7911CF00C4936B /* AppDelegate.swift */; };
 		0E6E60E61E7911CF00C4936B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E6E60E51E7911CF00C4936B /* Assets.xcassets */; };
 		0E6E60E91E7911CF00C4936B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E6E60E71E7911CF00C4936B /* MainMenu.xib */; };
-		0E6E61141E7914E100C4936B /* Plugin.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0E6E61101E7914A400C4936B /* Plugin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0E6E61141E7914E100C4936B /* Plugin.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 0E6E61101E7914A400C4936B /* Plugin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0E6E61151E7914F200C4936B /* Plugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E6E61101E7914A400C4936B /* Plugin.framework */; };
 		0E6E61181E79178000C4936B /* PluginHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6E61171E79178000C4936B /* PluginHost.swift */; };
-		0E6E613A1E7951BE00C4936B /* PluginTestA.plugin in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0E6E61381E79518900C4936B /* PluginTestA.plugin */; };
+		0E6E613A1E7951BE00C4936B /* PluginTestA.plugin in Copy Plugins */ = {isa = PBXBuildFile; fileRef = 0E6E61381E79518900C4936B /* PluginTestA.plugin */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,27 +31,36 @@
 			remoteGlobalIDString = 0E6E61261E794D4E00C4936B;
 			remoteInfo = PluginTestA;
 		};
+		0E7D39DA1E7B66BC0094DB54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E6E612F1E794D4E00C4936B /* PluginTestA.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E6E61251E794D4E00C4936B;
+			remoteInfo = PluginTestA;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		0E6E61121E7914BB00C4936B /* CopyFiles */ = {
+		0E6E61121E7914BB00C4936B /* Copy Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0E6E61141E7914E100C4936B /* Plugin.framework in CopyFiles */,
+				0E6E61141E7914E100C4936B /* Plugin.framework in Copy Frameworks */,
 			);
+			name = "Copy Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0E6E61391E79519E00C4936B /* CopyFiles */ = {
+		0E6E61391E79519E00C4936B /* Copy Plugins */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				0E6E613A1E7951BE00C4936B /* PluginTestA.plugin in CopyFiles */,
+				0E6E613A1E7951BE00C4936B /* PluginTestA.plugin in Copy Plugins */,
 			);
+			name = "Copy Plugins";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -175,12 +184,13 @@
 				0E6E60DC1E7911CF00C4936B /* Sources */,
 				0E6E60DD1E7911CF00C4936B /* Frameworks */,
 				0E6E60DE1E7911CF00C4936B /* Resources */,
-				0E6E61121E7914BB00C4936B /* CopyFiles */,
-				0E6E61391E79519E00C4936B /* CopyFiles */,
+				0E6E61121E7914BB00C4936B /* Copy Frameworks */,
+				0E6E61391E79519E00C4936B /* Copy Plugins */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0E7D39DB1E7B66BC0094DB54 /* PBXTargetDependency */,
 			);
 			name = PluginHost;
 			productName = PluginHost;
@@ -271,6 +281,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0E7D39DB1E7B66BC0094DB54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PluginTestA;
+			targetProxy = 0E7D39DA1E7B66BC0094DB54 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0E6E60E71E7911CF00C4936B /* MainMenu.xib */ = {
