@@ -38,6 +38,13 @@
 			remoteGlobalIDString = 0E6E61251E794D4E00C4936B;
 			remoteInfo = PluginTestA;
 		};
+		0E7D39DC1E7B70240094DB54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E6E61051E79127500C4936B /* Plugin.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E6E60F91E79127500C4936B;
+			remoteInfo = Plugin;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -190,6 +197,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				0E7D39DD1E7B70240094DB54 /* PBXTargetDependency */,
 				0E7D39DB1E7B66BC0094DB54 /* PBXTargetDependency */,
 			);
 			name = PluginHost;
@@ -287,6 +295,11 @@
 			isa = PBXTargetDependency;
 			name = PluginTestA;
 			targetProxy = 0E7D39DA1E7B66BC0094DB54 /* PBXContainerItemProxy */;
+		};
+		0E7D39DD1E7B70240094DB54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Plugin;
+			targetProxy = 0E7D39DC1E7B70240094DB54 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
