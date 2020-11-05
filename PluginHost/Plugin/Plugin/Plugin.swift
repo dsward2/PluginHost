@@ -20,7 +20,7 @@ import Cocoa
 @objc open class Plugin: NSObject {
 
     /// Plugin name
-    @objc public var name: String!
+    @objc public var name: String
     
     /// PluginHost main app object
     //@objc unowned(unsafe) let pluginHost: PluginHostDelegate
@@ -41,10 +41,9 @@ import Cocoa
         let bundleName = thisBundle.infoDictionary!["CFBundleName"] as! String
         self.name = bundleName
         
-        var aPluginHostProperty: String! = pluginHost.aPluginHostProperty   // test callback to host application
+        let aPluginHostProperty: String = pluginHost.aPluginHostProperty   // test callback to host application
         
-        if (aPluginHostProperty.characters.count > 0)
-        {
+        if (aPluginHostProperty.count > 0) {
             print("Plugin.framework - callback to host application succeeded - aPluginHostProperty = \(aPluginHostProperty)");
         } else {
             print("Plugin.framework - callback to host application failed");

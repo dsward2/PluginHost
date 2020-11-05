@@ -45,10 +45,9 @@ import Plugin
                     let bundle = Bundle(url: item), bundle.load() {
                         let pluginMetatype = bundle.principalClass as? Plugin.Type
                         if (pluginMetatype != nil) {
-                            let plugin = pluginMetatype?.init(pluginHost:self)
-                            if (plugin != nil) {
-                                plugins.append(plugin!)
-                                print("PluginHost - Loaded plugin named \(plugin!.name)")
+                            if let plugin = pluginMetatype?.init(pluginHost:self) {
+                                plugins.append(plugin)
+                                print("PluginHost - Loaded plugin named \(plugin.name)")
                             }
                         }
                 }
